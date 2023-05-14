@@ -392,16 +392,16 @@ a{
   right: 0;
 }
 .ag-orbit_planet-1 {
-  background-image: url("src/assets/img/react.svg");
+  background-image: url("/src/assets/img/react.svg");
 }
 .ag-orbit_planet-2 {
-  background-image: url("src/assets/img/facebook.svg");
+  background-image: url("/src/assets/img/facebook.svg");
 }
 .ag-orbit_planet-3 {
-  background-image: url("src/assets/img/instagram.svg");
+  background-image: url("/src/assets/img/instagram.svg");
 }
 .ag-orbit_planet-4 {
-  background-image: url("src/assets/img/telegram.svg");
+  background-image: url("/src/assets/img/telegram.svg");
 }
 
 @-webkit-keyframes an-orbits {
