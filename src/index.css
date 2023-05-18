@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Outfit', sans-serif;
+ 
 }
 
 :root{
@@ -33,6 +34,7 @@ a{
 
 .blue{
   color: var(--main-blue);
+  font-size: 16px;
 }
 
 
@@ -41,7 +43,7 @@ a{
   color:var(--main-black);
   font-size: 48px;
   font-weight: 900;
-  text-align: center;
+  text-align: left;
 }
 
 .header-2{
@@ -140,8 +142,8 @@ a{
 
 .navbar-responsive-container{
   transform: translateY(-100vh);
-  transition: all .5s ease-in-out;
   opacity: 0;
+  display: none;
 }
 
 .active{
@@ -154,7 +156,6 @@ a{
   justify-content: flex-start;
   height: 100vh;
   transform: translateY(0vh);
-  transition: all .5s ease-in-out;
   opacity: 1;
   z-index: 99;
 
@@ -207,21 +208,32 @@ a{
 /*Hero-Banner*/
 
 
+.hero-section-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5vh;
+  gap: 2vw;
+ 
+}
+
 .hero-banner-container{
   position: absolute;
   top: 30vh;
-  width: 100%;
+  width: 45%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  padding: 4rem;
 }
 
 .hero-cards-container{
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: start;
   margin-top: 1.5rem;
   gap: 1rem;
 
@@ -229,14 +241,14 @@ a{
 
 
 .hero-card{
-  width:150px;
-  height: 100px;
+  width:100px;
+  height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 2px solid var(--main-blue);
-  border-radius: 24px;
+  border-radius: 8px;
   background-color: white;
   transition: all .2s ease-in-out;
 }
@@ -253,7 +265,7 @@ a{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin-top: 1.5rem;
   gap: 1.5rem;
 }
@@ -506,15 +518,19 @@ a{
   padding-bottom: 1rem;
 }
 .slider-carousel{
-  padding: 5%;
-  margin-top: 5%
+  padding: 1rem;
+  overflow: hidden;
+  
 }
+
+
 
 @media only screen and (max-width: 767px) {
 
   .slider-carousel{
-    margin-top: 30vh;
+    margin-top: 10vh;
   }
+
 
   .ag-format-container {
     width: 100%;
@@ -526,7 +542,7 @@ a{
   }
   .ag-orbit_box {
     height: 100%;
-    width: 100%;
+    width: 55%;
     padding: 100% 0 0;
   }
 
@@ -543,19 +559,7 @@ a{
 }
 
 .socials{
-  position: fixed;
-  top: 40%;
-  left: 2%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  width: 24px;
-  padding: 1.5rem .5rem;
-  border: solid 2px var(--main-blue);
-  color: var(--main-blue);
-  border-radius: 16px;
+  display: none;
 }
 
 .socials a{
@@ -569,12 +573,90 @@ a{
   transition: all .3s ease-in-out;
 }
 
+.Lottie-animation{
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-@media only screen and (max-width: 639px) {
+@media only screen and (min-width:1600px){
+
+  .socials{
+  position: fixed;
+  top: 40%;
+  left: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  width: 24px;
+  padding: 1.5rem .5rem;
+  border: solid 2px var(--main-blue);
+  color: var(--main-blue);
+  border-radius: 16px;
+
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .hero-section-container{
+    display: flex;
+    flex-direction: column;
+    padding:15vh 1rem 0 1rem;
+  }
+
+  .header-1{
+    text-align: center;
+  }
+
+  .hero-cards-container{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-buttons-container{
+    align-items: center;
+    justify-content: center;
+  }
+
+ 
 
 }
 
-@media only screen and (max-width: 479px) {
+
+
+@media only screen and (max-width: 500px) {
+
+  .primary-button{
+
+    width: 80%;
+  }
+
+  .secondary-button{
+    width: 80%;
+  }
+
+ 
+  
+
+  .Lottie-animation{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:300px){
+  
+  .hero-section-container{
+    padding: 0;
+    width: 350px;
+  }
+
+ 
 
 }
 
@@ -583,13 +665,27 @@ a{
     width: 100%;
   }
 
-  .slider-carousel{
-    margin-top: 30vh;
+ 
+  .ag-orbit_box {
+    height: 100%;
+    width: 100%;
+    padding: 100% 0 0;
   }
 
-  .socials{
-    display: none;
+  .ag-orbit_orbit__outer{
+    height: 300px;
+    width: 300px;
   }
+
+  .ag-orbit_orbit__inner{
+    height: 300px;
+    width: 300px;
+  }
+
+  .slider-carousel{
+    padding-top: 10vh;
+  }
+
 
   .hero-banner-container{
     top: 15%;
@@ -608,9 +704,14 @@ a{
 
 }
 
-@media (min-width: 980px) and (max-width: 1161px) {
+@media (min-width: 980px) and (max-width: 1024px) {
   .ag-format-container {
     width: 100%;
+    overflow: hidden;
+  }
+
+  .slider-carousel{
+    padding-top: 10vh;
   }
 
   .hero-banner-container{
@@ -624,7 +725,7 @@ a{
   }
 
   .slider-carousel{
-    margin-top: 30vh;
+    margin-top: 10vh;
   }
 
 }
@@ -660,17 +761,15 @@ a{
   width: 100%;
 }
 
-.socials{
-  display: none;
-}
-
 .hero-buttons-container{
   flex-direction: column;
   width: 100%;
 }
 
 .slider-carousel{
-  margin-top: 30vh;
+  margin-top: 10vh;
 }
 
 }
+
+
