@@ -8,6 +8,7 @@ import {FaRegUserCircle} from "react-icons/fa";
 import {FiFacebook, FiInstagram} from "react-icons/fi";
 import Lottie from "lottie-react";
 import animation from "../assets/img/137377-web-design.json";
+import { HeroCard } from "./HeroCard";
 
 
 function Hero(){
@@ -22,31 +23,7 @@ function Hero(){
                     </div>
 
                     <div className="hero-cards-container">
-
-                            <div className="hero-card">
-                                    <MdWeb className="blue animate"/>
-                                    <p className="blue">Websites</p>
-                            </div>
-
-                            <div className="hero-card">
-                                    <FaRegUserCircle className="blue animate"/>
-                                    <p className="blue">UX/UI</p>
-                            </div>
-
-                            <div className="hero-card">
-                                <FiSearch className="blue animate"/>
-                                <p className="blue">SEO</p>
-                            </div>
-
-                            <div className="hero-card">
-                                <TbPhotoSensor2 className="blue animate"/>
-                                <p className="blue">Photography</p>
-                            </div>
-
-                            <div className="hero-card">
-                                <BiLike className="blue animate"/>
-                                <p className="blue">Social Media</p>
-                            </div>
+                        <HeroCard/>
                     </div>
 
                     <div className="hero-buttons-container">
