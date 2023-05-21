@@ -4,9 +4,12 @@ import { Card } from "./Cards";
 function Services() {
   return (
     <>
-      <div className="header-1">Our Services</div>
-
-      <Card />
+      <section className="services-section">
+        <div className="header-2">Our Services</div>
+        <div className="card-services-container">
+          <Card />
+        </div>
+      </section>
     </>
   );
 }

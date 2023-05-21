@@ -4,7 +4,7 @@ function Quality() {
   return (
     <section className="quality-section">
       <div className="paragraph-container">
-        <p className="header-1">Quality, Always.</p>
+        <p className="header-2">Quality, Always.</p>
         <p className="pagaraph">
           We never settle for mediocrity. With a blend of technical expertise
           and a deep understanding of our clients' goals, we bring their visions
@@ -13,7 +13,7 @@ function Quality() {
       </div>
 
       <div className="timeline">
-        <div className="blue-bar"></div>
+        <div className="blue-bar bar-responsive"></div>
 
         <div className="icons">
           <div className="icon-container">

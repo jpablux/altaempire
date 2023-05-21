@@ -318,6 +318,7 @@ a{
   padding-bottom: 1rem;
 }
 
+/**Swipper**/
 
 .swiper {
   width: 100%;
@@ -350,6 +351,8 @@ a{
   margin-left: auto;
   margin-right: auto;
 }
+
+/*Quality*/
 
 .quality-section{
   display: flex;
@@ -426,7 +429,7 @@ a{
   background-color: var(--main-blue);
 }
 
-
+/*Socials*/
 
 .socials{
   display: none;
@@ -450,6 +453,95 @@ a{
   align-items: center;
   justify-content: center;
 }
+
+
+/*Service Cards*/
+
+
+.services-section{
+  padding: 20vh 8vw;
+}
+
+.card-services-container{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 5rem 0;
+}
+
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  flex-shrink: 0;
+  gap: 1.5rem;
+  max-width: 320px;
+  height: 280px;
+  padding: 24px 32px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #ECF6FF 100%);
+  box-shadow: 1px 1px 5px rgba(113, 126, 152, 0.25);
+  border-radius: 24px;
+  transition: all .2s ease-in-out;
+}
+
+.card-container:hover{
+  box-shadow: 1px 1px 15px rgba(0, 118, 253, 0.836);
+  transition: all .2s ease-in-out;
+}
+
+.card-title-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items:center;
+  
+}
+
+.card-title{
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card-icon{
+  font-size: 24px;
+  color: var(--main-blue);
+}
+
+.black-line{
+  width: 10%;
+  height: 3px;
+  border-radius: 100px;
+  background-color: var(--main-black);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+}
+
+.button-card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: none;
+  padding: .6rem 1.5rem;
+  border-radius: 24px;
+  gap: .5rem;
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.button-card:hover{
+  background-color: var(--secondary-blue);
+}
+
+
 
 @media only screen and (min-width:1600px){
 
@@ -495,7 +587,7 @@ a{
 
   .pagaraph{
     text-align: center;
-    width: 60%;
+    width: 80%;
   }
 
 }
@@ -535,6 +627,10 @@ a{
     width: 80%;
   }
 
+  .card-container{
+    max-width: 280px;
+  }
+
   .secondary-button{
     width: 80%;
   }
@@ -561,6 +657,12 @@ a{
 
 @media (min-width: 768px) and (max-width: 979px) {
   
+
+
+  .card-container{
+    max-width: 280px;
+  }
+
 
   .slider-carousel{
     padding-top: 10vh;
@@ -590,8 +692,8 @@ a{
   .icons{
     flex-direction: column;
     position: relative;
-    top: -100vh;
-    gap: 11vh;
+    top: 0vh;
+    gap: 4vh;
   }
 
   .timeline{
@@ -599,16 +701,26 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .blue-bar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 10px;
-    height: 100vh;
+    display: none;
   }
+
+  .bar-responsive{
+    display: flex;
+    background-color: var(--main-blue);
+    height: 10px;
+    width: 720px;
+    min-width: 700px;
+    max-width: 720px;
+    position: relative;
+    rotate: 90deg;
+    z-index: -1;
+    top: 45vh;
+   }
+  
 
   .slider-carousel{
     padding-top: 10vh;
@@ -636,8 +748,12 @@ a{
   .icons{
     flex-direction: column;
     position: relative;
-    top: -100vh;
-    gap: 11vh;
+    top: 0vh;
+    gap: 4vh;
+  }
+
+  .services-section{
+    padding-top: 2rem;
   }
 
   .timeline{
@@ -645,22 +761,30 @@ a{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   .blue-bar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 10px;
-    height: 100vh;
+    display: none;
   }
   
 .responsive-menu{
   display: flex;
  
-
 }
+
+.bar-responsive{
+  display: flex;
+  background-color: var(--main-blue);
+  height: 10px;
+  width: 720px;
+  min-width: 700px;
+  max-width: 720px;
+  position: relative;
+  rotate: 90deg;
+  z-index: -1;
+  top: 45vh;
+ }
 
 .navbar-links{
   display: none;
